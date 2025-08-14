@@ -1,0 +1,13 @@
+.stApp {
+    background-color: #f8f9fa;
+}
+h1, .stMetric {
+    color: #2d2d2d;
+}
+.stMetric {
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    margin-bottom: 8px;
+}
