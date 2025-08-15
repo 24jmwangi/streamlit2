@@ -1,4 +1,4 @@
-# streamlit2 - With furhte customizations
+# Streamlit2 - With further customizations
 Experiment with streamlit
 
 <!--  -->
