@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import pandas as pd
 
-
+@st.cache_data
 def ui(data):
 
     st.set_page_config(page_title="☕ Coffee Sales Dashboard", layout="wide")
@@ -66,7 +66,7 @@ def ui(data):
     st.sidebar.metric("💰 Total Sales", filtered_df["money"].sum().round(1))
     st.sidebar.metric("📊 Average Sales", filtered_df["money"].mean().round(1))
     st.sidebar.metric("🧾Total Transactions", filtered_df["datetime"].nunique())
-    st.sidebar.metric("☕ Coffees", filtered_df["coffee_name"].nunique())
+    st.sidebar.metric("☕ Coffee Types", filtered_df["coffee_name"].nunique())
 
     # Top metrics
     col1, col2, col3, col4 = st.columns(4)
@@ -77,7 +77,7 @@ def ui(data):
     with col3:
         st.metric("🧾Total Transactions", filtered_df["datetime"].nunique())
     with col4:
-        st.metric("☕ Coffees", filtered_df["coffee_name"].nunique())
+        st.metric("☕ Coffee Types", filtered_df["coffee_name"].nunique())
   
     
     return filtered_df

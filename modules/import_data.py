@@ -1,9 +1,8 @@
 import kagglehub
 import pandas as pd
-
 import os
 
-
+@st.cache_data
 def get_data():
     path = kagglehub.dataset_download("ihelon/coffee-sales")
     csv_path  = os.path.join(path, "index_1.csv")
