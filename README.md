@@ -13,7 +13,7 @@ This project is an experiment using [Streamlit](https://streamlit.io/) to build 
 
 ## Live Demo
 
-[![Open Dashboard](https://img.shields.io/badge/Open%20Dashboard-Streamlit-green?logo=streamlit)](https://coffeedashboard.streamlit.app/)
+[![Open Dashboard](https://img.shields.io/badge/Open%20Dashboard-Streamlit-green?logo=streamlit)](https://coffeedashboard2310.streamlit.app/)
 
 ## Getting Started
 
