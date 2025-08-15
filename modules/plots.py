@@ -4,7 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go 
 
 
-
+@st.cache_data
 def plots(filtered_df):
     # Sales Trend
     st.subheader("Sales Trend")

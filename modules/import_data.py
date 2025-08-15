@@ -1,6 +1,7 @@
 import kagglehub
 import pandas as pd
 import os
+import streamlit as st
 
 @st.cache_data
 def get_data():
