@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 import pandas as pd
 
-@st.cache_data
+
 def ui(data):
 
     st.set_page_config(page_title="☕ Coffee Sales Dashboard", layout="wide")
