@@ -1,4 +1,4 @@
-# streamlit2
+# streamlit2 - With furhte customizations
 Experiment with streamlit
 
 <!--  -->
@@ -9,8 +9,11 @@ This project is an experiment using [Streamlit](https://streamlit.io/) to build 
 ## Features
 
 - Interactive data visualization
-- Easy-to-use web interface
-- Rapid prototyping with Python
+- Streamlit deployment
+
+## Live Demo
+
+[![Open Dashboard](https://img.shields.io/badge/Open%20Dashboard-Streamlit-green?logo=streamlit)](https://coffeedashboard.streamlit.app/)
 
 ## Getting Started
 
@@ -25,11 +28,7 @@ This project is an experiment using [Streamlit](https://streamlit.io/) to build 
     ```
 3. Run the app:
     ```bash
-    streamlit run main.py
+    streamlit run app.py
     ```
 
-## Live Demo
 
-[![Open Dashboard](https://img.shields.io/badge/Open%20Dashboard-Streamlit-green?logo=streamlit)](https://coffeedashboard.streamlit.app/)
-
-Click the button above to view the live Streamlit dashboard.
