@@ -38,7 +38,7 @@ def plots(filtered_df):
     st.pyplot(fig)
 
     # Treemap: visualize sales by coffee type and payment type
-    st.subheader("Sales Treemap: Payment Type & Coffee Name")
+    st.subheader("Sales by Coffee Type")
     treemap_df = (
         filtered_df.groupby(["cash_type", "coffee_name"], as_index=False)["money"].sum()
     )
@@ -46,14 +46,13 @@ def plots(filtered_df):
         treemap_df,
         path=["cash_type", "coffee_name"],
         values="money",
-        color="cash_type",
+        color="coffee_name",
         color_discrete_sequence=px.colors.qualitative.Pastel,
-        title="Sales Treemap: Payment Type & Coffee Name"
     )
     st.plotly_chart(fig, use_container_width=True)
 
     # Sankey chart: visualize flow from payment type to coffee name
-    st.subheader("Sales Flow: Payment Type → Coffee Name (Sankey Chart)")
+    st.subheader("Sales Flow: Payment Type → Coffee Name")
     sankey_df = (
         filtered_df.groupby(["cash_type", "coffee_name"], as_index=False)["money"].sum()
     )
@@ -70,25 +69,29 @@ def plots(filtered_df):
 
     fig = go.Figure(data=[go.Sankey(
         node=dict(
-            pad=15,
-            thickness=20,
-            line=dict(color="yellow", width=0.8),
+            pad=10,
+            thickness=30,
+            line=dict(color="yellow", width=0.5),
             label=labels,
-            color="rgba(23, 231, 180,0.8)"
+            # color="",
+       
+
         ),
         link=dict(
             source=source,
             target=target,
             value=value
         ))])
-
-    fig.update_layout(title_text="Sankey Diagram: Payment Type to Coffee Name", font_size=12)
+    fig.update_layout(
+        font=dict(color="black",
+        size=12)
+        )
     st.plotly_chart(fig, use_container_width=True)
 
 
 
     # Area chart for coffee type sales
-    st.subheader("Coffee Type Sales Over Time (Area Chart)")
+    st.subheader("Coffee Type Sales Over Time")
     area_data = (
         filtered_df.groupby([filtered_df["datetime"].dt.date, "coffee_name"])["money"]
         .sum()
@@ -96,7 +99,7 @@ def plots(filtered_df):
         .sort_index()
     )
     st.area_chart(area_data, use_container_width=True)
-
+    st.subheader("Dataframe")
     st.dataframe(filtered_df.head(10)) 
 
 
