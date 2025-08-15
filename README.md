@@ -1,4 +1,4 @@
-# Streamlit2 - With further customizations
+# Streamlit2 - An interactive dashboard With customizations.
 Experiment with streamlit
 
 <!--  -->
