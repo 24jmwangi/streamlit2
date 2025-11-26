@@ -1,6 +1,6 @@
 # Streamlit2 - An interactive dashboard With customizations.
 Experiment with streamlit
-![screenshot](dash2.png)
+![screenshot](Screenshot_20251126-212010.png)
 
 <!--  -->
 ## Overview
